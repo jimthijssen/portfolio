@@ -589,8 +589,8 @@ Main components
   /*font-weight: bold;*/
     position: relative;
     display: inline-block;
-    height: 90px;
-    line-height: 90px;
+    height: 85px;
+    line-height: 85px;
     padding: 0 10px;
     color: #2e3233;
     overflow: visible;
@@ -816,7 +816,7 @@ Main components
   /* arrow icon in CSS - for element with nested unordered lists */
   content: '';
   position: absolute;
-  top: 50%;
+  top: 48%;
   margin-top: -1px;
   display: inline-block;
   height: 2px;
