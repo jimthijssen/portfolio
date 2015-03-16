@@ -10,14 +10,17 @@ Primary style
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: sans-serif;
   color: #2e3233;
   background-color: #ffffff;
+  height: 100%;
 }
 @media only screen and (max-width: 1169px) {
   body.nav-on-left.overflow-hidden {
@@ -92,13 +95,13 @@ Main components
 
 .jim-main-content {
   background: #e2e3df;
-  min-height: 100vh;
+  min-height: 100%;
   z-index: 2;
 }
 
 .main-header {
   height: 50px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 3;
 }
 .nav-is-fixed .main-header {
@@ -1084,5 +1087,103 @@ support for no js
 
   .no-js .nav-is-fixed .primary-nav {
     position: fixed;
+  }
+}
+
+
+
+
+
+
+
+
+
+.scrolling-bg p {
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2;
+}
+.fixed-bg h1, .fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.fixed-bg.bg-1 {
+  background-image: url("../img/background-1.jpg");
+}
+.fixed-bg.bg-2 {
+  background-image: url("../img/background-2.jpg");
+}
+.fixed-bg.bg-3 {
+  background-image: url("../img/background-3.jpg");
+}
+.fixed-bg.bg-4 {
+  background-image: url("../img/background-4.jpg");
+}
+@media only screen and (min-width: 768px) {
+  .fixed-bg h1, .fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .fixed-bg {
+    background-attachment: fixed;
+  }
+  .fixed-bg h1, .fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.scrolling-bg.color-1 {
+  background-color: #3d3536;
+  color: #a6989a;
+}
+.scrolling-bg.color-2 {
+  background-color: #99a478;
+  color: #3d3536;
+}
+.scrolling-bg.color-3 {
+  background-color: #b4d7a8;
+  color: #3d3536;
+}
+@media only screen and (min-width: 768px) {
+  .scrolling-bg {
+    padding: 8em 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
   }
 }
